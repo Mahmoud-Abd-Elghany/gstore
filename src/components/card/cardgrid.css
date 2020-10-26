@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eeeeee19;
+  border-radius: 5px;
+  margin-left: 80px;
+  margin-right: 80px;
+  backdrop-filter: blur(7px);
+}
+
+@media only screen and (max-width: 1080px) {
+  .grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #eeeeee11;
+    border-radius: 5px;
+    backdrop-filter: blur(7px);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
