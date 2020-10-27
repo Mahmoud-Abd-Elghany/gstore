@@ -32,6 +32,14 @@ nav {
   color: var(--third-color);
   font-size: 20px;
   font-weight: 400;
+  border-bottom: 1px solid #eeeeee;
+  border-width: 0px;
+  transition: 0.1s ease-out;
+}
+.nav-links li a:hover {
+  color: var(--secondary-color);
+  border-bottom: 7px solid #3399ff;
+  border-radius: 6px;
 }
 
 .nav-search {
