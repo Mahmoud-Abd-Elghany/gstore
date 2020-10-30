@@ -1,14 +1,15 @@
 :root {
-  --border-radius: 8px;
+  --border-radius: 10px;
+  --card-radius: 5px;
 }
 .card-custom {
   display: grid;
   grid-template-columns: 300px;
-  grid-template-rows: 210px 50px 80px;
+  grid-template-rows: 210px auto 80px;
   grid-template-areas: "image" "text" "stats";
 
-  font-family: roboto;
-  border-radius: 8px;
+  font-family: sans-serif;
+  border-radius: var(--card-radius);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
   transition: 0.5s ease;
@@ -22,8 +23,8 @@
 /* Image Section Start */
 .card-image {
   grid-area: image;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
   width: 300px;
   height: 210px;
 }
@@ -31,68 +32,74 @@
 /* Text Section Start */
 .card-text {
   grid-area: text;
-  margin: 0.5px;
-  background-color: #3399ff;
-  font-size: 27px;
+  background-color: #222222;
+  font-size: 1.2rem;
   transition: 0.3s ease;
-}
-.card-text:hover {
-  transform: scale(1.1);
-  background-color: #3399ff;
-  border-radius: 7px;
+  padding: 2%;
+  color: #3399ff;
+  transition: 0.2s ease-out;
+  text-decoration: none;
+  z-index: 2;
+  font-weight: 520;
+  text-decoration: none !important;
+
+  height: fit-content;
 }
 
-.card-text .card-hl {
-  color: #222222;
-  transition: 0.2s ease;
-  text-decoration: none;
-}
-.card-text .card-hl:hover {
+.card-text:hover {
+  background-color: #3399ffff;
   color: #eeeeee;
+  height: fit-content;
 }
 /* Text Section End */
+
 /* Stats Section Start */
 .card-stats {
   grid-area: stats;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
   background: rgba(0, 0, 0, 0.9);
-  color: #eeeeee;
+  color: #eeeeee !important;
 }
 
 .card-stats .stat {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 15px;
+  text-align: center;
+  padding: 11px 0px;
   transition: 0.5s ease;
 }
 .card-stats .stat:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  color: #3399ff !important;
 }
 
 /*stat infos*/
 .card-stats .type {
-  font-size: 11px;
-  font-weight: 300;
+  font-size: 0.75rem;
+  font-weight: 550;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #494949e1 !important;
+  transition: 0.3s ease-out;
+}
+.card-stats .type:hover {
+  color: #3399ff !important;
 }
 
 .card-stats .value {
-  font-size: 22px;
+  font-size: 1.38rem;
   font-weight: 500;
 }
+
 /* middle stat border*/
 .card-stats .border-custom {
-  border-left: 2px solid #3399ff;
-  border-right: 2px solid #3399ff;
+  border-left: 3px solid #222222;
+  border-right: 3px solid #222222;
   border-top-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 .card-stats .border-custom:hover {
   border-left: 4px solid #3399ff;
@@ -100,5 +107,11 @@
   border-top-left-radius: 3px;
   border-bottom-right-radius: 3px;
   transform: scale(0.9);
+}
+.card-stats .mid {
+  text-decoration: line-through;
+  font-size: 0.75rem;
+  font-weight: 550;
+  text-transform: uppercase;
 }
 /* Stats Section End */

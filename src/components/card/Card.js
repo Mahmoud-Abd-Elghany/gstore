@@ -1,29 +1,28 @@
 import React from "react"
 import "./card.css"
 
-export default function Card () {
+export default function Card ({game}) {
+    const {title, dealID, thumb, salePrice, normalPrice, steamRatingPercent, steamRatingCount, steamRatingText , steamAppID ,metacriticScore, metacriticLink} = game;
     return(
         <div className="card-custom">
             <div >
-                <img className="card-image" alt='img' src="https://static.gamespot.com/uploads/original/1197/11970954/3245626-xlarge.img.jpg"/>
+                <img className="card-image" alt='img' src={thumb}/>
             </div>
 
-            <div className="card-text">
-                <a className="card-hl" href=".">Card Title</a>
-            </div>
+            <a className="card-text card-hl" href={`https://www.cheapshark.com/redirect?dealID={${dealID}}`} >{title}</a>
 
             <div className="card-stats">
                 <div className="stat">
-                    <div className="value">4m</div>
-                    <div className="type">views</div>
+                    <div className="value ">{steamRatingPercent}%</div>
+                    <a className="type link" href={`https://store.steampowered.com/app/${steamAppID}`}>Steam</a>
                 </div>
                 <div className="stat border-custom">
-                    <div className="value">3/10</div>
-                    <div className="type">rate</div>
+                    <div className="value">{salePrice}</div>
+                    <div className="mid">{normalPrice}</div>
                 </div>
                 <div className="stat">
-                    <div className="value">4/5</div>
-                    <div className="type">ign</div>
+                    <div className="value">{metacriticScore}</div>
+                    <a className="type link" href={`https://www.metacritic.com${metacriticLink}`}>metacritic</a>
                 </div>
             </div>
         </div>

@@ -51,7 +51,7 @@ nav {
   align-items: center;
 }
 
-.search-bar{
+.search-bar {
   border: 2px solid #3399ff;
   background-color: var(--main-color);
   border-radius: 3px;
@@ -62,7 +62,7 @@ nav {
   outline: none;
   height: 38px;
 }
-.search-btn{
+.search-btn {
   margin: 8px;
   height: 39px;
   border: 2px solid #3399ff;
@@ -75,14 +75,11 @@ nav {
   font-size: 17.5px;
 }
 
-.search-btn:hover{
+.search-btn:hover {
   background-color: var(--third-color);
   color: var(--main-color);
   border-radius: 5px;
-
 }
-
-
 
 @media screen and (max-width: 768px) {
   .nav-components {
@@ -158,7 +155,7 @@ nav {
     outline: none;
   }
 
-  .search-btn{
+  .search-btn {
     height: 39px;
     border: 2px solid #3399ff;
     border-radius: 3px;
@@ -171,8 +168,8 @@ nav {
     cursor: pointer;
     transition: 0.3s ease-out;
   }
-  
-  .search-btn:hover{
+
+  .search-btn:hover {
     background-color: var(--third-color);
     color: var(--main-color);
     border-radius: 5px;

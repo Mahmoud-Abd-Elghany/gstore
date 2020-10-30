@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import "../styles/navbar.css"
+import "./navbar.css"
 
 function Navbar(){
     const navComponent = useRef()
