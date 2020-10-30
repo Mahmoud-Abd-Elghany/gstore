@@ -27,13 +27,14 @@
   border-top-right-radius: var(--card-radius);
   width: 300px;
   height: 210px;
+  object-fit: fill;
 }
 /* Image Section End */
 /* Text Section Start */
 .card-text {
   grid-area: text;
   background-color: #222222;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   transition: 0.3s ease;
   padding: 2%;
   color: #3399ff;
@@ -42,13 +43,14 @@
   z-index: 2;
   font-weight: 520;
   text-decoration: none !important;
-
-  height: fit-content;
+  height: 45px;
+  overflow: hidden;
 }
 
 .card-text:hover {
   background-color: #3399ffff;
   color: #eeeeee;
+  overflow: visible;
   height: fit-content;
 }
 /* Text Section End */
@@ -67,7 +69,7 @@
 
 .card-stats .stat {
   text-align: center;
-  padding: 11px 0px;
+  padding: 13px 0px;
   transition: 0.5s ease;
 }
 .card-stats .stat:hover {
@@ -110,7 +112,7 @@
 }
 .card-stats .mid {
   text-decoration: line-through;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 550;
   text-transform: uppercase;
 }

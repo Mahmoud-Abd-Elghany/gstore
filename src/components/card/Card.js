@@ -2,7 +2,8 @@ import React from "react"
 import "./card.css"
 
 export default function Card ({game}) {
-    const {title, dealID, thumb, salePrice, normalPrice, steamRatingPercent, steamRatingCount, steamRatingText , steamAppID ,metacriticScore, metacriticLink} = game;
+    const {title, dealID, thumb, salePrice, normalPrice, steamRatingPercent, steamAppID ,metacriticScore, metacriticLink} = game;
+    
     return(
         <div className="card-custom">
             <div >
