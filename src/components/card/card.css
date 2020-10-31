@@ -117,3 +117,48 @@
   text-transform: uppercase;
 }
 /* Stats Section End */
+
+/*card stats for searched Card */
+.card-stats-searched{
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+  background: rgba(0, 0, 0, 0.9);
+  color: #eeeeee !important;
+}
+.card-stats-searched .searched{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-stats-searched .stat {
+  text-align: center;
+  padding: 13px 0px;
+  transition: 0.5s ease;
+}
+.card-stats-searched .stat:hover {
+  transform: scale(1.1);
+  color: #3399ff !important;
+}
+
+
+.card-stats-searched .type {
+  font-size: 1rem;
+  font-weight: 550;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #494949e1 !important;
+  transition: 0.3s ease-out;
+}
+.card-stats-searched .type:hover {
+  color: #3399ff !important;
+}
+.card-stats-searched .value {
+  font-size: 1.38rem;
+  font-weight: 500;
+}

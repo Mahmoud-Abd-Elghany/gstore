@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from "./components/nav/navbar"
 import CardList from "./components/card/CardList"
+import SearchedList from "./components/card/SearchedList"
 import "./components/styles/app.css"
 import {GameProvider} from "./components/state/gameContext"
 
@@ -10,7 +11,7 @@ function App() {
     <GameProvider>
       <div className="">
         <Navbar/>
-        <CardList/>
+        <SearchedList/>
       </div>
     </GameProvider>
 

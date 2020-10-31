@@ -4,7 +4,7 @@ import "./cardgrid.css"
 import {GameContext} from "../state/gameContext"
 
 export default function CardList (){
-    const gameList = useContext(GameContext)
+    const {gameList} = useContext(GameContext)
 
     return(
         <div className="grid">
