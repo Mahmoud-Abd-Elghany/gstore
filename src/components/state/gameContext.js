@@ -17,6 +17,7 @@ export const GameProvider = props =>{
         fetch(`https://www.cheapshark.com/api/1.0/games?title=${searched}&limit=10`)
             .then(resp => resp.json())
             .then(resp => setSearchedList(resp))
+            .then(resp => console.log(resp))
             .catch(error => console.log("error", error))
     },[searched])
 

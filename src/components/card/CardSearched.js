@@ -1,6 +1,7 @@
 import React from "react"
 import "./card.css"
 
+
 export default function CardSearched ({game}) {
     const {external,thumb,cheapest, cheapestDealID,steamAppID} = game;
     
